@@ -1,10 +1,11 @@
 import { ExpoConfig, ConfigContext } from "@expo/config";
 
-const CLERK_PUBLISHABLE_KEY = "your-clerk-publishable-key";
+const CLERK_PUBLISHABLE_KEY = "pk_test_c3Rhci1tYXlmbHktMTkuY2xlcmsuYWNjb3VudHMuZGV2JA";
 
 const defineConfig = (_ctx: ConfigContext): ExpoConfig => ({
-  name: "expo",
-  slug: "expo",
+  name: "test",
+  slug: "test",
+  scheme: "dude",
   version: "1.0.0",
   orientation: "portrait",
   icon: "./assets/icon.png",
@@ -20,7 +21,8 @@ const defineConfig = (_ctx: ConfigContext): ExpoConfig => ({
   assetBundlePatterns: ["**/*"],
   ios: {
     supportsTablet: true,
-    bundleIdentifier: "your.bundle.identifier",
+    bundleIdentifier: "com.troyizzle.daycare",
+    buildNumber: "25.0.0"
   },
   android: {
     adaptiveIcon: {
@@ -30,7 +32,7 @@ const defineConfig = (_ctx: ConfigContext): ExpoConfig => ({
   },
   extra: {
     eas: {
-      projectId: "your-project-id",
+      projectId: "b2b840e2-ea43-4152-9162-a80a3afe65e7"
     },
     CLERK_PUBLISHABLE_KEY,
   },
